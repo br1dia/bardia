@@ -1,0 +1,22 @@
+name = "bardia"
+main = "src/index.ts"
+compatibility_date = "2024-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+[dev]
+port = 8787
+ip = "0.0.0.0"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bardia-db"
+database_id = "YOUR_DATABASE_ID_HERE"
+
+[vars]
+ADMIN_PATH = "panel"
+API_PATH = "api"
+PROXY_PATH = "sync"
+ENVIRONMENT = "development"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
